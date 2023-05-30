@@ -1,1 +1,6 @@
-<p>panini works!</p>
+<div *ngFor="let panino of listaPanini">
+  <a routerLink="/panineria/{{panino.nome}}">{{ panino.nome }}</a>
+</div>
+
+
+<router-outlet></router-outlet>

@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { ClassPanino } from 'src/app/models/class-panino';
+import { PanineriaCenterService } from '../panineria-center.service';
 
 @Component({
   selector: 'app-panini',
@@ -7,4 +9,14 @@ import { Component } from '@angular/core';
 })
 export class PaniniComponent {
 
+  listaPanini: ClassPanino[] = []
+  constructor(private panServ: PanineriaCenterService) {
+    this.listaPanini = this.panServ.listaPanini
+  }
+
+
+
 }
+
+
+

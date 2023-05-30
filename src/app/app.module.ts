@@ -8,6 +8,7 @@ import { PaniniComponent } from './panineria/panini/panini.component';
 import { PaninoComponent } from './panineria/panino/panino.component';
 import { PaninoEditComponent } from './panineria/panino/panino-edit/panino-edit.component';
 import { AddPaninoComponent } from './panineria/add-panino/add-panino.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { AddPaninoComponent } from './panineria/add-panino/add-panino.component'
     PaninoComponent,
     PaninoEditComponent,
     AddPaninoComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
