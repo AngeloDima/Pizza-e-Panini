@@ -1,1 +1,8 @@
-<p>panino-edit works!</p>
+<h2>Modifica Panino</h2>
+
+<div *ngIf="editPanino">
+  <input type="text" [(ngModel)]="editPanino.nome">
+  <input type="text" [(ngModel)]="editPanino.condimenti">
+  <input type="number" [(ngModel)]="editPanino.prezzo">
+  <button (click)="salvaModifiche()">Modifica</button>
+</div>

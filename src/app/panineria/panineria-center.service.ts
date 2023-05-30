@@ -13,21 +13,11 @@ export class PanineriaCenterService {
       condimenti: "aria e patate",
       prezzo: 6.5
     },
+    // Altri panini...
 
-    {
-      nome: "complesso",
-      condimenti: "ossigeno e metano",
-      prezzo: 8.5
-    },
-
-    {
-      nome: "Dot Accademy",
-      condimenti: "patate, carne e Angular",
-      prezzo: 12
-    },
   ];
 
-  getByNome(nome: string): Observable<ClassPanino> {
+  getByNome(nome: string): Observable<ClassPanino | undefined> {
     const panino = this.listaPanini.find(panino => panino.nome === nome);
     if (panino) {
       return of(panino);
@@ -38,6 +28,18 @@ export class PanineriaCenterService {
       });
     }
   }
+
+  salvaModifichePanino(panino: ClassPanino): void {
+    const index = this.listaPanini.findIndex(p => p.nome === panino.nome);
+    if (index !== -1) {
+      this.listaPanini[index] = panino;
+    }
+  }
+
+  addPanino(panino: ClassPanino) {
+    this.listaPanini.push(panino)
+  }
+
 
   constructor() { }
 }

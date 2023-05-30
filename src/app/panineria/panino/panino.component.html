@@ -1,5 +1,7 @@
-<p>DETTAGGLI</p>
-
 <div *ngIf="dettaglio">
-  {{ dettaglio.nome }}
+  <h1> Nome panino: {{ dettaglio.nome }}</h1>
+  <h4> Nome panino: {{ dettaglio.condimenti }}</h4>
+  <h4> Nome panino: {{ dettaglio.prezzo }}</h4>
+  <a routerLink="/editPanino/{{dettaglio.nome}}">Modifica il panino</a>
 </div>
+<a routerLink="/panineria">Torna indietro</a>

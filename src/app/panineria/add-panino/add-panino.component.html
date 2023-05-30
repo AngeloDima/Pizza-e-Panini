@@ -1,1 +1,10 @@
-<p>add-panino works!</p>
+<h1>Crea panino</h1>
+
+<input type="text" placeholder="nome" [(ngModel)]="nomePanino">
+<input type="text" placeholder="nome" [(ngModel)]="condimentiPanino">
+<input type="text" placeholder="nome" [(ngModel)]="prezzoPanino">
+<button type="submit" (click)="createPanino()">ADD</button>
+
+
+<h2>{{messaggio}}</h2>
+<a routerLink="/panineria">Torna alla panineria</a>

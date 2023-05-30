@@ -27,3 +27,6 @@ export class PaninoComponent implements OnInit {
     }
   }
 }
+
+
+
