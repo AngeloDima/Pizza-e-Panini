@@ -16,15 +16,14 @@ export class PaninoEditComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private router: Router,
-    private ciao: PanineriaCenterService
+    private panServ: PanineriaCenterService
   ) { }
 
   ngOnInit(): void {
     const nome = this.route.snapshot.paramMap.get('nome');
     if (nome) {
-      this.ciao.getByNome(nome).subscribe(
+      this.panServ.getByNome(nome).subscribe(
         editPanino => this.editPanino = editPanino,
-        error => console.error(error)
       );
     }
   }
@@ -32,7 +31,7 @@ export class PaninoEditComponent implements OnInit {
 
   salvaModifiche(): void {
     if (this.editPanino) {
-      this.ciao.salvaModifichePanino(this.editPanino);
+      this.panServ.salvaModifichePanino(this.editPanino);
       this.router.navigate(['/panineria']);
     }
   }

@@ -10,6 +10,9 @@ import { PaninoEditComponent } from './panineria/panino/panino-edit/panino-edit.
 import { AddPaninoComponent } from './panineria/add-panino/add-panino.component';
 import { HomeComponent } from './home/home.component';
 import { FormsModule } from '@angular/forms';
+import { PizzeriaComponent } from './pizzeria/pizzeria.component';
+import { LoginComponent } from './login/login.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +23,9 @@ import { FormsModule } from '@angular/forms';
     PaninoEditComponent,
     AddPaninoComponent,
     HomeComponent,
+    PizzeriaComponent,
+    LoginComponent,
+    PageNotFoundComponent,
 
   ],
   imports: [
